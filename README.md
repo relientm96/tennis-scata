@@ -7,6 +7,12 @@ This project is a simple solution to the coding-dojo [tennis kata problem](https
 - Java 1.8 or later
 - [sbt](https://www.scala-sbt.org/1.x/docs/) - build tool for Scala projects
 
+## To Run
+
+```bash
+cd tennis-scata
+sbt run
+```
 ## Kata Description (Taken from the codingdojo website)
 
 This Kata is about implementing a simple tennis game. I came up with it while thinking about Wii tennis, where they have simplified tennis, so each set is one game.
