@@ -1,8 +1,11 @@
 object Tennis {
 
   def incrementScore(playerScore: Int): Int = {
-    if (playerScore < 30) playerScore + 15
-    else playerScore + 10
+    val isLessThan30 = if (playerScore < 30) true else false
+    isLessThan30 match {
+      case true => playerScore + 15
+      case false => playerScore + 10
+    }
   }
 
   def chooseWinner(playerOneScore: Int, playerTwoScore: Int): String = {
