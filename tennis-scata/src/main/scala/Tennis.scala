@@ -8,13 +8,12 @@ object Tennis {
     }
   }
 
-  def chooseWinner(playerOneScore: Int, playerTwoScore: Int): String = {
-    if (playerOneScore == playerTwoScore)
-      throw new Error(
-        "Players must have different scores if a winner needs to be chosen"
-      )
-    if (playerOneScore > playerTwoScore) "Player1"
-    else "Player2"
+  def scoreAPoint(player1Score: Int, player2Score: Int, playerThatScored: Int): Int = {
+    playerThatScored match {
+      case 0 => incrementScore(player1Score)
+      case 1 => incrementScore(player2Score)
+      case _ => throw new Error("Can only score a 0 or 1 result")
+    }
   }
 
   def scoreGame(gameResults: List[Int]): List[List[Int]] = {
