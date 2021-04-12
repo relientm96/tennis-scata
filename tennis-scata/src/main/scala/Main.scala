@@ -1,22 +1,19 @@
 object Main extends App {
 
-  /**
-  * Goal that I had for this tennis kata
-  * Input is a List[Int] = (1, 0, 1 ...)
-  *   -> where 1, 0 represents whether player 2 or 1 wins that point
-  * Output:
-      -> List[List[Int]] where it represents score of player 1 and 2
-      -> Input: (0, 0, 0, 0) 
-      -> Output: (40, 0)
+  val gameResults: List[Int] = List(0, 0, 0)
+  val scores1 = Tennis.scoreGame(gameResults) // Returns [0, 40]
+  println(s"Game 1 Scores: $scores1")
 
-      -> Input: (1, 1, 1, 1)
-      -> Output: (0, 40)
+  val gameResults2: List[Int] = List(1, 1, 1)
+  val scores2 = Tennis.scoreGame(gameResults2) // Returns [40, 0]
+  println(s"Game 2 Scores: $scores2")
 
-      -> Input: (1, 0, 0, 1, 1)
-      -> Output: (30, 40)
-  */
+  val gameResults3: List[Int] = List(1, 0, 1, 0, 1)
+  val scores3 = Tennis.scoreGame(gameResults3) // Returns [40, 30]
+  println(s"Game 3 Scores: $scores3")
 
-  //val gameResults: List[Int] = List(1, 1, 1, 1) // Returns [0, 40]
-  // gameResults2: List[Int] = List(0, 0, 0, 0) // Returns [40. 0]
+  val gameResults4: List[Int] = List(1, 1, 1, 0, 0, 0)
+  val scores4 = Tennis.scoreGame(gameResults4) // Returns [40, 40]
+  println(s"Game 4 Scores: $scores4")
 
 }
