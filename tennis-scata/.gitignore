@@ -2,4 +2,7 @@ target
 *.class
 .metals
 .vscode
-
+.bloop
+.scalafmt.conf
+metals
+metals.sbt
